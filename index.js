@@ -28,6 +28,6 @@ app.post('/aqib', function(req, res){
 
 })
 
-var server = app.listen(3000, function(){
-    console.log('aqib server is listening on port 3000'); //this is calling port 3000 within the machine which acts like entrance for the application
+var server = app.listen(app.get('port'), function(){
+    console.log('aqib server is listening on port ' + server.address().port); //this is calling port 3000 within the machine which acts like entrance for the application
 })
